@@ -1,5 +1,5 @@
 import { distinctUntilChanged } from 'rxjs/operators';
-import projects from "./projects";
+import projects from './projects';
 
 export default class WidgetStats {
   constructor(store) {
@@ -9,13 +9,13 @@ export default class WidgetStats {
 
   init() {
     this.drawProjects();
-    // debugger;
     this.subscribeToStore();
   }
 
+  // Отображаем названия проектов и количество открытых задач
   drawProjects() {
     projects.forEach(({ name, id, tasks }) => {
-      const filteredTasks = tasks.filter(task => !task.done);
+      const filteredTasks = tasks.filter((task) => !task.done);
       const el = document.createElement('div');
       el.classList.add('stats__row', 'project');
       el.dataset.id = id;
@@ -28,19 +28,20 @@ export default class WidgetStats {
     });
   }
 
+  // Подписываемся на состояние хранилища
   subscribeToStore() {
-    console.log('subscribe')
     this.store.state$
       .pipe(
         distinctUntilChanged(),
       ).subscribe((state) => {
-        console.log(state)
         const { counter, projectId } = state;
+
         if (!projectId) return;
+
         const project = this.container.querySelector(`[data-id="${projectId}"]`);
         const tasksNumber = project.querySelector('.project__tasks');
         const { textContent: number } = tasksNumber;
-        
+
         tasksNumber.textContent = +number + counter;
       });
   }

@@ -120,11 +120,6 @@ const projects = [
         name: 'Add support for multiple languages',
         done: false,
       },
-      {
-        id: 105,
-        name: 'Implement offline functionality by caching data and enabling users to access it without an internet connection',
-        done: false,
-      },
     ],
   },
   {

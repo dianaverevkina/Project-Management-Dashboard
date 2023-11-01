@@ -13,7 +13,6 @@ export default class Store {
   }
 
   dispatch(type, payload) {
-    console.log('dispatch')
     this.actions$.next({ type, payload });
   }
 }

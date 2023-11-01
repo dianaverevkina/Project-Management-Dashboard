@@ -1,6 +1,6 @@
-import WidgetTasks from "./WidgetTasks";
-import WidgetStats from "./WidgetStats";
-import Store from "./Store";
+import WidgetTasks from './WidgetTasks';
+import WidgetStats from './WidgetStats';
+import Store from './Store';
 
 const store = new Store();
 
