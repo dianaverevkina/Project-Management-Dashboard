@@ -80,9 +80,6 @@ body {
 }
 
 .stats {
-  // .stats__title
-  &__title {
-  }
   // .stats__wrapper
   &__wrapper {
     display: flex;
@@ -99,17 +96,18 @@ body {
     @include flexSpace(row);
     gap: 2rem;
   }
-  // .stats__col
-  &__col {
-  }
   // .stats__col-name
   &__col-name {
+    font-size: 1.1rem;
+    font-weight: 700;
   }
-  // .stats__project-name
-  &__project-name {
-  }
-  // .stats__tasks-number
-  &__tasks-number {
+}
+.title {
+  font-size: 1.3rem;
+}
+.project{
+  // .project__tasks
+  &__tasks {
     background-color: $black;
     color: $white;
     border-radius: 0.8rem;
@@ -117,15 +115,7 @@ body {
   }
 }
 
-.title {
-  font-size: 1.3rem;
-}
-
-
 .tasks {
-  // .tasks__title
-  &__title {
-  }
   // .tasks__container
   &__container {
     display: flex;
