@@ -19,14 +19,13 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
-    "eslint": "^8.49.0",
+    "eslint": "^8.52.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-import": "^2.29.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.7.6",
-    "rxjs": "^7.8.1",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
     "webpack": "^5.88.2",
@@ -35,6 +34,7 @@
     "webpack-merge": "^5.9.0"
   },
   "dependencies": {
-    "core-js": "^3.32.2"
+    "core-js": "^3.32.2",
+    "rxjs": "^7.8.1"
   }
 }
